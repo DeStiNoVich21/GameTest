@@ -52,16 +52,20 @@ namespace Player
         }
         public override void Kick()
         {
+            _animator.SetBool("Attack", true);
 
         }
 
         private void LateUpdate()
         {
             if (!Input.GetKey(KeyCode.W) && !Input.GetKey(KeyCode.S) &&
-                !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D))
+                !Input.GetKey(KeyCode.A) && !Input.GetKey(KeyCode.D) &&
+                !Input.GetKey(KeyCode.F))
             {
                 _animator.SetBool("Run", false); // —брос анимации бега
                 _animator.SetBool("Idle", true);
+                _animator.SetBool("Attack", false);
+
             }
         }
     }
