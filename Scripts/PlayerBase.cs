@@ -3,48 +3,51 @@ using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 
-public abstract class Pl : MonoBehaviour
+namespace Player
 {
-    public abstract void MoveUp();
-    public abstract void MoveDown();
-    
-    public abstract void MoveLeft();
-
-    public abstract void MoveRight();
-
-    public abstract void Kick();
-
-
-    void Start()
+    public abstract class Pl : MonoBehaviour
     {
-        
-    }
+        public abstract void MoveUp();
+        public abstract void MoveDown();
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.anyKeyDown)
+        public abstract void MoveLeft();
+
+        public abstract void MoveRight();
+
+        public abstract void Kick();
+
+
+        void Start()
         {
-            switch (Input.inputString)
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            if (Input.anyKeyDown)
             {
-                case "w":
-                    MoveUp();
-                    break;
-                case "s":
-                    MoveDown();
-                    break;
-                case "d":
-                    MoveRight();
-                    break;
-                case "a":
-                    MoveLeft();
-                    break;
-                case "f":
-                    Kick();
-                    break;
+                switch (Input.inputString)
+                {
+                    case "w":
+                        MoveUp();
+                        break;
+                    case "s":
+                        MoveDown();
+                        break;
+                    case "d":
+                        MoveRight();
+                        break;
+                    case "a":
+                        MoveLeft();
+                        break;
+                    case "f":
+                        Kick();
+                        break;
+                }
             }
         }
+
+
     }
-
-
 }
