@@ -48,6 +48,7 @@ namespace Player
         {
             StartCoroutine(SwingSword());
         }
+
         // Coroutine для взмаха меча
         private IEnumerator SwingSword()
         {
