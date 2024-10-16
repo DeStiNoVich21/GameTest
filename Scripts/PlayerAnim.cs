@@ -11,7 +11,6 @@ namespace Player
         void Start()
         {
             _animator = GetComponent<Animator>();
-            _animator.SetBool("Up", false);
             _animator.SetBool("Left", false);
 
 
@@ -23,6 +22,7 @@ namespace Player
             _animator.SetBool("Run", true);
             _animator.SetBool("Idle", false);
             _animator.SetBool("Up", true);
+            
 
 
         }
@@ -31,6 +31,7 @@ namespace Player
             _animator.SetBool("Run", true);
             _animator.SetBool("Idle", false);
             _animator.SetBool("Up", false);
+
 
 
         }
@@ -52,7 +53,6 @@ namespace Player
         }
         public override void Kick()
         {
-            _animator.SetBool("Attack", true);
 
         }
 
@@ -64,7 +64,6 @@ namespace Player
             {
                 _animator.SetBool("Run", false); // —брос анимации бега
                 _animator.SetBool("Idle", true);
-                _animator.SetBool("Attack", false);
 
             }
         }
